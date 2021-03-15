@@ -9,8 +9,8 @@ using PracticeManagement.Data;
 namespace PracticeManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210315025949_initAll")]
-    partial class initAll
+    [Migration("20210315040854_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
