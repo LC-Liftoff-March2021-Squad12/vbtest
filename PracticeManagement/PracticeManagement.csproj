@@ -21,6 +21,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,27 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
+    <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20210303055343_mysqlinitial.cs" />
+    <Compile Remove="Migrations\20210303055343_mysqlinitial.Designer.cs" />
+    <Compile Remove="Migrations\20210303061929_addCalendar.cs" />
+    <Compile Remove="Migrations\20210303061929_addCalendar.Designer.cs" />
+    <Compile Remove="Migrations\20210314234522_initialwithcalendar.cs" />
+    <Compile Remove="Migrations\20210314234522_initialwithcalendar.Designer.cs" />
+    <Compile Remove="Migrations\20210315005409_initAll.cs" />
+    <Compile Remove="Migrations\20210315005409_initAll.Designer.cs" />
+    <Compile Remove="Migrations\20210315010112_newCal.cs" />
+    <Compile Remove="Migrations\20210315010112_newCal.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
