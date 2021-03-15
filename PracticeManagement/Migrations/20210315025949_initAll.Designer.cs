@@ -9,7 +9,7 @@ using PracticeManagement.Data;
 namespace PracticeManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210315010554_initAll")]
+    [Migration("20210315025949_initAll")]
     partial class initAll
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

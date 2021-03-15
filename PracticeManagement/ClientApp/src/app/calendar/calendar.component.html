@@ -1,0 +1,28 @@
+<h1 id="tableLabel">Calendar Entries</h1>
+
+<p>This component demonstrates fetching data from the database.</p>
+
+<p *ngIf="!details"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="details">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let detail of details">
+      <td>{{ detail.title }}</td>
+      <td>{{ detail.description }}</td>
+      <td>{{ detail.appointmenStartDate }}</td>
+      <td>{{ detail.appointmenEndDate }}</td>
+      <td>{{ detail.appointmentStarTime }}</td>
+      <td>{{ detail.appointmentEndTime }}</td>
+    </tr>
+  </tbody>
+</table>
