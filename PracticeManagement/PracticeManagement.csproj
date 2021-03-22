@@ -21,6 +21,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0" />
   </ItemGroup>
 
@@ -32,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Identity\Pages\Account\Register.cshtml.cs" />
     <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
     <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
     <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
@@ -45,6 +47,12 @@
     <Compile Remove="Migrations\20210315005409_initAll.Designer.cs" />
     <Compile Remove="Migrations\20210315010112_newCal.cs" />
     <Compile Remove="Migrations\20210315010112_newCal.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Register.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

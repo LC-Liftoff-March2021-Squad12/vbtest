@@ -2,20 +2,20 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'calendar',
-  templateUrl: './calendar.component.html'
+  selector: 'app-calendar',
+  templateUrl: './calendar-detail.component.html'
 })
-export class FetchDataComponent {
-  public details: calendarDetail[];
+export class CalendarEntryComponent {
+  public details: CalendarEntry[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<calendarDetail[]>(baseUrl + 'calendarDetails').subscribe(result => {
+    http.get<CalendarEntry[]>(baseUrl + 'CalendarEntry').subscribe(result => {
       this.details = result;
     }, error => console.error(error));
   }
 }
 
-interface calendarDetail {
+interface CalendarEntry {
 
   id: number;
   appointmenStartDate: string;
